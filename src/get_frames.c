@@ -52,149 +52,129 @@ int main(int argc, char *argv[]) {
     extract_frames(&tv);
     tv.frame_n = get_frame_count();
 
-    /*
-    char* frame = "frames/140.png";
-    char* frame2 = "frames/141.png";
-    char* frame3 = "frames/142.png";
-    char* frame4 = "frames/143.png";
-    char* frame5 = "frames/144.png";
-    char* frame6 = "frames/145.png";
-    char* frame7 = "frames/146.png";
-    char* frame8 = "frames/147.png";
-    char* frame9 = "frames/148.png";
-    char* frame10 = "frames/149.png";
-    char* frame11 = "frames/150.png";
-    char* frame12 = "frames/151.png";
-    char* frame13 = "frames/152.png";
-    char* frame14 = "frames/153.png";
-    char* frame15 = "frames/154.png";
-    char* frame16 = "frames/155.png";
-    char* frame17 = "frames/156.png";
-    char* frame18 = "frames/157.png";
-    char* frame19 = "frames/158.png";
-    char* frame20 = "frames/159.png";
-    char* frame21 = "frames/160.png";
-    char* frame22 = "frames/161.png";
-    char* frame23 = "frames/162.png";
-    char* frame24 = "frames/163.png";
-    char* frame25 = "frames/164.png";
-    char* frame26 = "frames/165.png";
-    char* frame27 = "frames/166.png";
-    char* frame28 = "frames/167.png";
-    char* frame29 = "frames/168.png";
-    char* frame30 = "frames/169.png";
-    char* frame31 = "frames/170.png";
-    char* frame32 = "frames/171.png";
-    char* frame33 = "frames/172.png";
-    char* frame34 = "frames/173.png";
-
+    char* frame = "frames/440.png";
+    char* frame2 = "frames/441.png";
+    char* frame3 = "frames/442.png";
+    char* frame4 = "frames/443.png";
+    char* frame5 = "frames/444.png";
+    char* frame6 = "frames/445.png";
+    char* frame7 = "frames/446.png";
+    char* frame8 = "frames/447.png";
+    char* frame9 = "frames/448.png";
+    char* frame10 = "frames/449.png";
+    char* frame11 = "frames/450.png";
+    char* frame12 = "frames/451.png";
+    char* frame13 = "frames/452.png";
+    char* frame14 = "frames/453.png";
+    char* frame15 = "frames/454.png";
+    char* frame16 = "frames/455.png";
+    char* frame17 = "frames/456.png";
+    char* frame18 = "frames/457.png";
+    char* frame19 = "frames/458.png";
+    char* frame20 = "frames/459.png";
+    char* frame21 = "frames/460.png";
+    char* frame22 = "frames/461.png";
+    char* frame23 = "frames/462.png";
+    char* frame24 = "frames/463.png";
+    char* frame25 = "frames/464.png";
+    char* frame26 = "frames/465.png";
+    char* frame27 = "frames/466.png";
+    char* frame28 = "frames/467.png";
+    char* frame29 = "frames/468.png";
+    char* frame30 = "frames/469.png";
+    char* frame31 = "frames/470.png";
+    char* frame32 = "frames/471.png";
+    char* frame33 = "frames/472.png";
+    char* frame34 = "frames/473.png";
+    char* frame35 = "frames/474.png";
+    char* frame36 = "frames/475.png";
+    char* frame37 = "frames/476.png";
+    char* frame38 = "frames/477.png";
+    char* frame39 = "frames/478.png";
+    char* frame40 = "frames/479.png";
+    char* frame41 = "frames/480.png";
     load_frame(&tv, frame);
     exec_frame(&tv);
-    
     load_frame(&tv, frame2);
     exec_frame(&tv);
-
     load_frame(&tv, frame3);
     exec_frame(&tv);
-    
     load_frame(&tv, frame4);
     exec_frame(&tv);
-
     load_frame(&tv, frame5);
     exec_frame(&tv);
-    
     load_frame(&tv, frame6);
     exec_frame(&tv);
-
     load_frame(&tv, frame7);
     exec_frame(&tv);
-    
     load_frame(&tv, frame8);
     exec_frame(&tv);
-
     load_frame(&tv, frame9);
     exec_frame(&tv);
-
     load_frame(&tv, frame10);
     exec_frame(&tv);
-
     load_frame(&tv, frame11);
     exec_frame(&tv);
-    
     load_frame(&tv, frame12);
     exec_frame(&tv);
-
     load_frame(&tv, frame13);
     exec_frame(&tv);
-    
     load_frame(&tv, frame14);
     exec_frame(&tv);
-
     load_frame(&tv, frame15);
     exec_frame(&tv);
-    
     load_frame(&tv, frame16);
     exec_frame(&tv);
-
     load_frame(&tv, frame17);
     exec_frame(&tv);
-
     load_frame(&tv, frame18);
     exec_frame(&tv);
-
     load_frame(&tv, frame19);
     exec_frame(&tv);
-    
     load_frame(&tv, frame20);
     exec_frame(&tv);
-
     load_frame(&tv, frame21);
     exec_frame(&tv);
-    
     load_frame(&tv, frame22);
     exec_frame(&tv);
-
     load_frame(&tv, frame23);
     exec_frame(&tv);
-    
     load_frame(&tv, frame24);
     exec_frame(&tv);
-
     load_frame(&tv, frame25);
     exec_frame(&tv);
-
     load_frame(&tv, frame26);
     exec_frame(&tv);
-
     load_frame(&tv, frame27);
     exec_frame(&tv);
-    
-    load_frame(&tv, frame28);
-    exec_frame(&tv);
-
     load_frame(&tv, frame29);
     exec_frame(&tv);
-    
     load_frame(&tv, frame30);
     exec_frame(&tv);
-
     load_frame(&tv, frame31);
     exec_frame(&tv);
-
     load_frame(&tv, frame32);
     exec_frame(&tv);
-
     load_frame(&tv, frame33);
     exec_frame(&tv);
-
     load_frame(&tv, frame34);
     exec_frame(&tv);
-    */
+    load_frame(&tv, frame35);
+    exec_frame(&tv);
+    load_frame(&tv, frame36);
+    exec_frame(&tv);
+    load_frame(&tv, frame37);
+    exec_frame(&tv);
+    load_frame(&tv, frame38);
+    exec_frame(&tv);
+    load_frame(&tv, frame39);
+    exec_frame(&tv);
+    load_frame(&tv, frame40);
+    exec_frame(&tv);
 
     char path[12];
     for (int i = 1; i < tv.frame_n; i++) {
         make_frame_path(path, i);
-        printf("\nFRAME PATH: %s\n", path);
         load_frame(&tv, path);
         exec_frame(&tv);
     }
@@ -204,9 +184,9 @@ int main(int argc, char *argv[]) {
 
 
 void make_frame_path(char* buf, size_t i) {
-    if (i < 10) sprintf(buf, "frames/00%d.png", i);
-    else if (i < 100 && i > 9) sprintf(buf, "frames/0%d.png", i);
-    else sprintf(buf, "frames/%d.png", i);
+    if (i < 10) sprintf(buf, "frames/00%d.png\0", i);
+    else if (i < 100 && i > 9) sprintf(buf, "frames/0%d.png\0", i);
+    else sprintf(buf, "frames/%d.png\0", i);
 }
 
 
@@ -216,7 +196,6 @@ void load_frame(term_video* tv, char* frame_path) {
     if (img == NULL) fprintf(stderr, "Could not load frame '%s'", frame_path);
 
     size_t buf_idx = 0;
-
     for (int i = 0; i < tv->size; i++) {
         if (i % tv->w == 0 && i != 0) 
             tv->frame_buf[buf_idx++] = '\n';
@@ -235,8 +214,8 @@ void exec_frame(term_video* tv) {
     system("clear");
     fwrite(tv->frame_buf, sizeof(char), strlen(tv->frame_buf), stdout);
     fflush(stdout);
-    sleep(3);
-    //usleep(tv->micros);
+    //sleep(3);
+    usleep(tv->micros);
 }
 
 
