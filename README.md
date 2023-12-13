@@ -39,7 +39,7 @@ __Or__ by running the executable either on the cloned repo directory or anywhere
 ## Uninstalling
 To remove the cloned repo:
 ```bash 
-rm -rf <cloned repository directory
+rm -rf <cloned_repo_directory>
 ```
 And to remove the executable from the /usr/bin folder
 ```bash 
