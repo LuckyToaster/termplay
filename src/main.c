@@ -48,7 +48,6 @@ int main(int argc, char *argv[]) {
     char frame_buf_buf[tv.buf_size];
     tv.frame_buf = frame_buf_buf; 
 
-
     if (exists("build/temp.mp4")) remove("build/temp.mp4");
     remove("frames");
     make_frames_dir();
