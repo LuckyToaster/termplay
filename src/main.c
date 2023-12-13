@@ -19,15 +19,15 @@ typedef struct {
 } term_video;
 
 
-void extract_frames(term_video* restrict v);
-void load_frame(term_video* restrict v, char* frame_path);
-void exec_frame(term_video* restrict v);
-bool exists(char* path);
-void rmrf(char* path);
+bool exists(char* restrict path);
+void rmrf(char* restrict path);
 void make_frames_dir();
 int get_frame_count();
 char get_rand_char();
-void make_frame_path(char* buf, size_t i);
+void extract_frames(term_video* restrict v);
+void load_frame(term_video* restrict v, char* frame_path);
+void exec_frame(term_video* restrict v);
+void make_frame_path(char* restrict buf, size_t i);
 void load_and_exec_frames(term_video* v, char *path, size_t idx);
 
 
@@ -72,7 +72,7 @@ void load_and_exec_frames(term_video* v, char *path, size_t idx) {
 }
 
 
-void make_frame_path(char* buf, size_t i) {
+void make_frame_path(char* restrict buf, size_t i) {
     if (i < 10) sprintf(buf, "frames/00%d.png\0", i);
     else if (i < 100 && i > 9) sprintf(buf, "frames/0%d.png\0", i);
     else sprintf(buf, "frames/%d.png\0", i);
@@ -127,7 +127,7 @@ void make_frames_dir() {
 }
 
 
-void rmrf(char* path) {
+void rmrf(char* restrict path) {
     char command[100];
     sprintf(command, "rm -rf %s", path);
     if (system(command) == -1)
@@ -148,7 +148,7 @@ int get_frame_count() {
 }
 
 
-bool exists(char* path) {
+bool exists(char* restrict path) {
     if (access(path, F_OK) != -1) return true;
     else return false;
 }
