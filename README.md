@@ -1,5 +1,5 @@
-# ncurses_video_player
-play any video on the terminal
+# TERM_PLAY
+Reproduce any video on the terminal
 
 ## Dependencies
 * Linux system
