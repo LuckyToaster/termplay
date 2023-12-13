@@ -17,7 +17,7 @@ git clone https://github.com/LuckyToaster/termplay.git
 cd termplay
 make
 ``` 
-4. To install system-wide and grant execution priviledges to executable:
+3. To install system-wide and grant execution priviledges to executable:
 ```bash
 sudo cp build/termpplay /usr/local/bin
 sudo chmod +x /usr/local/bin/termplay
