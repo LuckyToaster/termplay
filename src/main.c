@@ -49,7 +49,7 @@ int main(int argc, char *argv[]) {
     tv.frame_buf = frame_buf_buf; 
 
     if (exists("build/temp.mp4")) remove("build/temp.mp4");
-    remove("frames");
+    rmrf("frames");
     make_frames_dir();
     extract_frames(&tv);
     tv.frame_n = get_frame_count();
