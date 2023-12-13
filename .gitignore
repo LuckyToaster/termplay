@@ -1,4 +1,6 @@
 frames
 build
-ba.mp4
+*.mp4
+*.webm
+*.mkv
 *.txt
