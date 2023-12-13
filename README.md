@@ -29,7 +29,7 @@ make run <args...>
 ```
 To run with make (only works from the repository directory). For example a path to a video, fps, width and height arguments are required and the program is run with make like: 
 ```bash
-make run path=<path> fps=<fps> w=<width> h=<height
+make run path=<path> fps=<fps> w=<width> h=<height>
 ```
 __Or__ by running the executable either on the cloned repo directory or anywhere if installed system-wide (installation instruction 3). The order matters and the arguments must be given like this:
 ```bash
