@@ -19,14 +19,14 @@ typedef struct {
 } term_video;
 
 
-void extract_frames(term_video* tv);
-void exec_frame(term_video* tv);
+void extract_frames(term_video* restrict v);
+void load_frame(term_video* restrict v, char* frame_path);
+void exec_frame(term_video* restrict v);
 bool exists(char* path);
 void rmrf(char* path);
 void make_frames_dir();
 int get_frame_count();
 char get_rand_char();
-void load_frame(term_video* tv, char* frame_path);
 void make_frame_path(char* buf, size_t i);
 void load_and_exec_frames(term_video* v, char *path, size_t idx);
 
@@ -37,26 +37,26 @@ int main(int argc, char *argv[]) {
         return 1;
     }
 
-    term_video tv;
-    tv.video_path = argv[1];
-    tv.fps = atoi(argv[2]);
-    tv.w = atoi(argv[3]);
-    tv.h = atoi(argv[4]);
-    tv.size = tv.w * tv.h;
-    tv.buf_size = tv.w * tv.h + tv.h;
-    tv.micros = (1000 / tv.fps) * 1000; 
-    char frame_buf_buf[tv.buf_size];
-    tv.frame_buf = frame_buf_buf; 
+    term_video v;
+    v.video_path = argv[1];
+    v.fps = atoi(argv[2]);
+    v.w = atoi(argv[3]);
+    v.h = atoi(argv[4]);
+    v.size = v.w * v.h;
+    v.buf_size = v.w * v.h + v.h;
+    v.micros = (1000 / v.fps) * 1000; 
+    char frame_buf_buf[v.buf_size];
+    v.frame_buf = frame_buf_buf; 
 
     if (exists("build/temp.mp4")) remove("build/temp.mp4");
     rmrf("frames");
     make_frames_dir();
-    extract_frames(&tv);
-    tv.frame_n = get_frame_count();
+    extract_frames(&v);
+    v.frame_n = get_frame_count();
 
     initscr();
     char path[20];
-    load_and_exec_frames(&tv, path, 1);
+    load_and_exec_frames(&v, path, 1);
     endwin();
 
     return 0;
@@ -79,31 +79,31 @@ void make_frame_path(char* buf, size_t i) {
 }
 
 
-void load_frame(term_video* tv, char* frame_path) {
+void load_frame(term_video* restrict v, char* restrict frame_path) {
     int w, h, channels;
     unsigned char* img = stbi_load(frame_path, &w, &h, &channels, STBI_rgb_alpha);
     if (img == NULL) fprintf(stderr, "Could not load frame '%s'", frame_path);
 
     size_t buf_idx = 0;
-    for (int i = 0; i < tv->size; i++) {
-        if (i % tv->w == 0 && i != 0) 
-            tv->frame_buf[buf_idx++] = '\n';
+    for (int i = 0; i < v->size; i++) {
+        if (i % v->w == 0 && i != 0) 
+            v->frame_buf[buf_idx++] = '\n';
         if (img[i*4] <= 50 && img[i*4+1] <= 50 && img[i*4+2] <= 50) 
-            tv->frame_buf[buf_idx++] = '0'; // if i use get_rand_char() it shits the bed
-        else tv->frame_buf[buf_idx++] = 32;
+            v->frame_buf[buf_idx++] = '0'; // if i use get_rand_char() it shits the bed
+        else v->frame_buf[buf_idx++] = 32;
     }
 
-    tv->frame_buf[buf_idx++] = '\n';
-    tv->frame_buf[buf_idx] = '\0';
+    v->frame_buf[buf_idx++] = '\n';
+    v->frame_buf[buf_idx] = '\0';
     stbi_image_free(img);
 }
 
 
-void exec_frame(term_video* tv) {
+void exec_frame(term_video* restrict v) {
     erase();
-    printw(tv->frame_buf);
+    printw(v->frame_buf);
     refresh();
-    usleep(tv->micros);
+    usleep(v->micros);
 }
 
 
@@ -113,9 +113,9 @@ char get_rand_char() {
 }
 
 
-void extract_frames(term_video* tv) {
+void extract_frames(term_video* restrict v) {
     char command[100];
-    sprintf(command, "ffmpeg -i %s -vf \"fps=%d, scale=%d:%d\" ./frames/%%03d.png", tv->video_path, tv->fps, tv->w, tv->h);
+    sprintf(command, "ffmpeg -i %s -vf \"fps=%d, scale=%d:%d\" ./frames/%%03d.png", v->video_path, v->fps, v->w, v->h);
     if (system(command) == -1)
         fprintf(stderr, "Could not extract the frames with the desired characteristics");
 }
