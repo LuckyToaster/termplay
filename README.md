@@ -42,13 +42,11 @@ either on the cloned repo directory or anywhere if installed system-wide (instal
 the order matters.
 
 ### Uninstalling
-*
+To remove the cloned repo:
 ```bash 
 rm -rf <cloned repository directory
 ```
-removing the cloned repo
-*
+And to remove the executable from the /usr/bin folder
 ```bash 
 sudo rm /usr/local/bin/termplay
 ```
-removing executable from /usr/bin folder
