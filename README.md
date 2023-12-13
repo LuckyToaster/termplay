@@ -14,7 +14,6 @@ Reproduce any video on the terminal
 4. ```sudo chmod +x /usr/local/bin/termplay```
 
 ### Running
-*
 ```bash
 make run <args...>
 ```
@@ -22,7 +21,15 @@ to run with make (only works from the repository directory). For example a path 
 ```bash
 make run path=<path> fps=<fps> w=<width> h=<height
 ```
-* __Or__ by running the executable ```./termplay``` either on the cloned repo directory or anywhere if installed system-wide (installation instructions 3 and 4). The arguments must be given like this: ```./termplay <video_path> <fps> <w> <h>``` the order matters.
+__Or__ by running the executable 
+```bash
+./termplay
+```
+either on the cloned repo directory or anywhere if installed system-wide (installation instructions 3 and 4). The arguments must be given like this: 
+```bash
+./termplay <video_path> <fps> <w> <h>
+```
+the order matters.
 
 ### Uninstalling
 *
