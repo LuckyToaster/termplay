@@ -8,8 +8,8 @@ play any video on the terminal
 * ncurses
 
 ## Install 
-```git clone https://github.com/LuckyToaster/ncurses_video_player.git```
-```make``` To compile
+- ```git clone https://github.com/LuckyToaster/ncurses_video_player.git```
+- ```make``` To compile
 
 ## Run
 * ```make run <args...>``` to run with make
