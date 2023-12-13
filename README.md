@@ -1,13 +1,13 @@
 # TERMPLAY
 Reproduce any video on the terminal
 
-### Dependencies
+## Dependencies
 * Linux system
 * gcc
 * ffmpeg
 * ncurses
   
-### Installation 
+## Installation 
 1. Cloning the repo:
 ```bash
 git clone https://github.com/LuckyToaster/termplay.git
@@ -23,11 +23,11 @@ sudo cp build/termpplay /usr/local/bin
 sudo chmod +x /usr/local/bin/termplay
 ```
 
-### Running
+## Running
 ```bash
 make run <args...>
 ```
-to run with make (only works from the repository directory). For example a path to a video, fps, width and height arguments are required and the program is run with make like: 
+To run with make (only works from the repository directory). For example a path to a video, fps, width and height arguments are required and the program is run with make like: 
 ```bash
 make run path=<path> fps=<fps> w=<width> h=<height
 ```
@@ -35,13 +35,12 @@ __Or__ by running the executable
 ```bash
 ./termplay
 ```
-either on the cloned repo directory or anywhere if installed system-wide (installation instructions 3 and 4). The arguments must be given like this: 
+either on the cloned repo directory or anywhere if installed system-wide (installation instructions 3 and 4).The order matters and the arguments must be given like this: 
 ```bash
 ./termplay <video_path> <fps> <w> <h>
 ```
-the order matters.
 
-### Uninstalling
+## Uninstalling
 To remove the cloned repo:
 ```bash 
 rm -rf <cloned repository directory
