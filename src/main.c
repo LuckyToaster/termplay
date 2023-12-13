@@ -44,7 +44,7 @@ int main(int argc, char *argv[]) {
     v.h = atoi(argv[4]);
     v.size = v.w * v.h;
     v.buf_size = v.w * v.h + v.h;
-    v.micros = (1000 / v.fps) * 1000; 
+    v.micros = 1000000 / v.fps;  
     char frame_buf_buf[v.buf_size];
     v.frame_buf = frame_buf_buf; 
 
