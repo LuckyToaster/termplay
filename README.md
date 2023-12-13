@@ -41,7 +41,7 @@ To remove the cloned repo:
 ```bash 
 rm -rf <cloned_repo_directory>
 ```
-And to remove the executable from the /usr/bin folder
+And to remove the executable from the /usr/bin folder:
 ```bash 
 sudo rm /usr/local/bin/termplay
 ```
