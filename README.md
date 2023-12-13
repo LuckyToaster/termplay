@@ -8,10 +8,20 @@ Reproduce any video on the terminal
 * ncurses
   
 ### Installation 
-1. ```bash git clone https://github.com/LuckyToaster/ncurses_video_player.git```
-2. ```make``` To compile
-3. ```sudo cp build/termpplay /usr/local/bin```
-4. ```sudo chmod +x /usr/local/bin/termplay```
+1. Cloning the repo:
+```bash
+git clone https://github.com/LuckyToaster/termplay.git
+```
+2. To Compile:
+```bash
+cd termplay
+make
+``` 
+4. To install system-wide and grant execution priviledges to executable:
+```bash
+sudo cp build/termpplay /usr/local/bin
+sudo chmod +x /usr/local/bin/termplay
+```
 
 ### Running
 ```bash
