@@ -2,7 +2,7 @@ CC = gcc
 SRC_DIR = src
 BUILD_DIR = build
 FRAMES_DIR = frames
-TARGET = $(BUILD_DIR)/bad_apple
+TARGET = $(BUILD_DIR)/termplay
 STB_IMAGE_H = src/stb_image.h
 SRCS = $(wildcard $(SRC_DIR)/*.c)
 
